@@ -17,6 +17,8 @@ print(f"{file_path.find('beta') = }")
 print(f"{file_path.replace('alpha', 'beta') = }")
 print(f"{file_path.split('/') = }")
 parts = file_path.split('/')
+print(f"{parts = }")
+
 print(f"{':'.join(parts) = }")
 print()
 
