@@ -1,4 +1,7 @@
 
+#   range(start-at, stop-before, increment-by)
+#   range(stop-before)
+
 print("range(1, 6): ", end=' ')
 for x in range(1, 6):  # Start=1, Stop=6 (1 through 5)
     print(x, end=' ')
@@ -22,4 +25,5 @@ print()
 print("range(10, 0, -1): ", end=' ')
 for x in range(10, 0, -1):  # Start=10, Stop=1, Step=-1 (10 through 1 by 1)
     print(x, end=' ')
+    print("Blast Off!!")
 print()

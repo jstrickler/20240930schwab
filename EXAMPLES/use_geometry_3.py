@@ -1,4 +1,7 @@
-from geometry import circle_area, rectangle_area, square_area
+# load alpha/mathlib/geometry.py
+
+# from pkg.pkg.module import thing
+from alpha.mathlib.geometry import circle_area, rectangle_area, square_area
 
 a1 = circle_area(8)
 a2 = rectangle_area(10, 12)

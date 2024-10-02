@@ -11,5 +11,5 @@ for i, color in colors_enum:  # enumerate() returns iterable of (index, value) t
 
 print()
 
-for num, month in enumerate(months, 1):  # Second parameter to enumerate is added to index
+for num, month in enumerate(months, 100):  # Second parameter to enumerate is added to index
     print(f"{num} {month}")

@@ -7,9 +7,7 @@ area = circle_area(diameter)
 area = rectangle_area(length, width)
 area = square_area(side)
 """
-import math   # load math.py
-
-PI = math.pi
+from math import pi as PI
 
 def circle_area(diameter):
     """
@@ -40,7 +38,11 @@ def square_area(side):
     """
     return side ** 2
 
+print(f"MY NAME is {__name__}")
+
 if __name__ == "__main__":
+    # only if this file run as main script, NOT A MODULE
+    print("RUNNING AS MAIN!")
     area1 = square_area(15)
     print(f"area1: {area1}")
     

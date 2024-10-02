@@ -1,11 +1,12 @@
 
 set1data = ['red', 'blue', 'green', 'purple', 'green']  # create literal set
-set2data = ['green', 'blue', 'yellow', 'orange']
+set2data = ['blue', 'blue', 'blue', 'green', 'blue', 'yellow', 'orange', 'blue']
 
 set1 = set(set1data)
 set2 = set(set2data)
 
 set1.add('taupe')  # add element to set (ignored if already in set)
+set2.add('crimson')
 
 print(f"{set1 = }")
 print(f"{set2 = }")

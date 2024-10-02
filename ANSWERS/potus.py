@@ -30,12 +30,27 @@ def get_info(index):
                 pres_data["party"] = flds[9]
 
                 break
+        else:
+            raise ValueError("Term not found")
 
     return pres_data
 
 def get_all_data():
     all_data = []
-    for i in range(1, 44):
+    for i in range(1, 47):
         all_data.append(get_info(i))
     return all_data
 
+if __name__ == "__main__":
+    print(get_all_data()[-1])
+    # i = 1
+    # while True:
+    #     try:
+    #         p = get_info(i)
+    #     except ValueError as err:
+    #         curr_term = i - 1
+    #         pres = get_info(curr_term)
+    #         print("Current president:")
+    #         print(pres)
+    #         break
+    #     i += 1

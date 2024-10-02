@@ -5,6 +5,7 @@ temp_name = "temp.txt"
 with open(file_name) as file_in:
     with open(temp_name, "w") as file_out:
         for line in file_in:
+            # could add condition here...
             new_line = line.upper()
             file_out.write(new_line)
 

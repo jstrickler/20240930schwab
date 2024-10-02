@@ -1,8 +1,7 @@
-
 import logging
 
 logging.basicConfig(
-    format='%(levelname)s %(name)s %(asctime)s %(filename)s %(lineno)d %(message)s', # set the format for log entries
+    format='%(levelname)s\t%(name)s\t%(asctime)s\t%(filename)s\t%(lineno)d\t%(message)s', # set the format for log entries
     datefmt="%x-%X",
     filename='../LOGS/formatted.log',
     level=logging.INFO,

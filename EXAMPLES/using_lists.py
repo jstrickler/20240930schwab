@@ -36,3 +36,6 @@ print(f"cities: {cities}\n")
 city = cities.pop(3)  # pops specified element
 print(f"city: {city}")
 print(f"cities: {cities}\n")
+
+for city in reversed(cities):
+    print(city)
