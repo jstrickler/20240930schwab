@@ -16,5 +16,13 @@ class MemoryChecker():
         return self.process.memory_info().rss  # Return memory use for PID
 
 if __name__ == '__main__':
+    from time import sleep
+    
     mc = MemoryChecker()
     print(mc())  # can call at any time to get current memory use
+    big_list = [True] * 10000000
+    print(mc())
+    del big_list
+    print(mc())
+    sleep(5)
+    print(mc())

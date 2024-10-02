@@ -1,13 +1,16 @@
 import random
 
 class Knight(object):
-    def __init__(self, name):
-        self._name = name
+    def __init__(self, requested_name: str):
         with open('../DATA/knights.txt') as knights_in:
+            raw_line: str
             for raw_line in knights_in:
-                line = raw_line.rstrip('\n\r')
+                line: str = raw_line.rstrip('\n\r')
+                name: str
+                title: str
                 (name, title, color, quest, comment) = line.split(":")
-                if name == self._name:
+                if name.lower() == requested_name.lower():
+                    self._name = name
                     self._title = title
                     self._favorite_color = color
                     self._quest = quest
@@ -15,26 +18,26 @@ class Knight(object):
                     break
 
     @property
-    def name(self):
+    def name(self) -> str:
         return self._name
 
     @property
-    def title(self):
+    def title(self) -> str:
         return self._title
 
     @property
-    def favorite_color(self):
+    def favorite_color(self) -> str:
         return self._favorite_color
 
     @property
-    def quest(self):
+    def quest(self) -> str:
         return self._quest
 
     @property
-    def comment(self):
+    def comment(self) -> str:
         return self._comment
     
-    def joust(self, opponent):
+    def joust(self, opponent: "Knight") -> "Knight":
         """
         Simulate a jousting match between this knight and an opponent
 
