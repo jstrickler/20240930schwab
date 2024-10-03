@@ -1,0 +1,7 @@
+for each resource on ALPHA
+    for reach record in resource
+        fetch record
+        convert JSON to Python
+        update Python data structure to match BETA resource
+        convert Python back to JSON
+        POST new JSON data to BETA

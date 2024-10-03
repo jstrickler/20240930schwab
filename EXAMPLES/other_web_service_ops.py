@@ -1,11 +1,11 @@
 import requests
 
-print('PUT:')
+print('PUT:')  # /api/resource/ID
 r = requests.put("http://httpbin.org/put", data={'spam': 'ham'}) # send data via HTTP PUT request
 print(r.status_code, r.text)
 print('-' * 60)
 
-print('DELETE:')
+print('DELETE:') #  /api/resource/ID
 r = requests.delete("http://httpbin.org/delete") # send HTTP DELETE request
 print(r.status_code, r.text)
 print('-' * 60)

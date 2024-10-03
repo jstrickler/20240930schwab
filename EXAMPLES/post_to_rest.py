@@ -11,7 +11,7 @@ for i in range(3):
             'label': 'test_' + str(i)
         },
         cookies={'python': 'testing'},
-        headers={'X-Python': 'Guido van Rossum'},
+        headers={'X-Python': 'Guido van Rossum', 'user-agent': "John Strickler;jstrickler@gmail.com;https://www.cja-tech.com"},
     )
     if response.status_code in (requests.codes.OK, requests.codes.created):
         print(response.status_code)

@@ -1,0 +1,37 @@
+<html>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+      <div class="mermaid">
+    
+        classDiagram
+          class Animal {
+            _count : int
+            _name
+            _sound
+            _species
+            name
+            species
+            count()
+            die()
+            kill(obj)
+            make_sound()
+          }
+          class Insect {
+            _can_fly : int
+            can_fly
+          }
+          class Mammal {
+            _gestation : int
+            gestation
+          }
+          class Reptile {
+            _has_legs : bool
+            has_legs
+          }
+          Insect --|> Animal
+          Mammal --|> Animal
+          Reptile --|> Animal
+  
+       </div>
+  </body>
+</html>
