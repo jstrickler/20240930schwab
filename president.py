@@ -92,8 +92,8 @@ if __name__ == '__main__':
     print(p.first_name, p.last_name)
     print()
 
-    # print value of all public attributes
-    for attribute in dir(p):
-        if not attribute.startswith('_'):
-            print(attribute, getattr(p, attribute))
+    # # print value of all public attributes
+    # for attribute in dir(p):
+    #     if not attribute.startswith('_'):
+    #         print(attribute, getattr(p, attribute))
 

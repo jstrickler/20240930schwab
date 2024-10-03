@@ -1,4 +1,3 @@
-
 import sqlite3
 
 TERMS_TO_UPDATE = [1, 5, 19, 22, 36]

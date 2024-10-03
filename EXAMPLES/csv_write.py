@@ -2,7 +2,6 @@ import sys
 import csv
 
 chicago_data = [
-    ['Name', 'Position Title', 'Department', 'Employee Annual Salary'],
     ['BONADUCE,  MICHAEL J', 'POLICE OFFICER', 'POLICE', '$80724.00'],
     ['MELLON,  MATTHEW J "Matt"', 'POLICE OFFICER', 'POLICE', '$75372.00'],
     ['FIERI,  JOHN J', 'FIREFIGHTER-EMT', 'FIRE', '$75342.00'],
@@ -18,14 +17,19 @@ chicago_data = [
     ['SCUBA,  ANDREW G', 'POLICE OFFICER', 'POLICE', '$75372.00'],
     ['SWINE,  MATTHEW W', 'SERGEANT', 'POLICE', '$99756.00'],
     ['''RYDER,  MYRTA T "Lil'Myrt"''', 'POLICE OFFICER', 'POLICE', '$83706.00'],
-    ['KORSHAK,  ROMAN', 'PARAMEDIC', 'FIRE', '$75372.00']
+    ['KORSHAK,  ROMAN', 'PARAMEDIC', 'FIRE', '$75372.00'],
 ]
+
+data_header = ['Name', 'Position Title', 'Department', 'Employee Annual Salary']
 
 with open('../TEMP/chi_data.csv', 'w') as chi_out:
     #  On Windows, output line terminator must be set to '\n'.
     #  While it's not needed on Linux/Mac, it doesn't cause any problems,
     #  so this keeps the code portable.
     wtr = csv.writer(chi_out, lineterminator='\n') # create CSV writer from file object that is opened
+
+    wtr.writerow(data_header)  # write header
+
     for data_row in chicago_data:  # iterate over records from file
         data_row[0] = data_row[0].title()  # make first field title case rather than all uppercase
         data_row[-1] = data_row[-1].lstrip('$')  # strip leading $ from last field
